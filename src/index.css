@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html, body {
+  height:80vh;
+  width:80vw;
+}
+#main {
+  margin-left: 100px;
+  margin-top: 100px;
+  /* background-color: red; */
+  height: auto;
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  /* Create 3 equal columns */
+  gap: 0px;
+  /* Space between the buttons */
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: 1px solid #999;
+  font-size: 24px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  /* margin:0px -6px; */
+
+}
+#main h2{
+  opacity: .8;
+
+}
+#main h5 {
+  opacity: .4;
+  color: rgb(132, 0, 255);
+}
+#main2{
+  /* position: absolute; */
+
+
+  /* background-color: red; */
+  /* width: 600px; */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+#main3 button{
+  border: none;
+  background-color: rgb(143, 114, 114);
+  border-radius: 50px;
+  height: 3rem;
+  width: 15rem;
+  cursor: pointer;
+  margin-top: 3px;
+  color: white;
+  font-weight: 900;
+  font-size: large;
+
+}
+#main3 button:hover{
+  background-color: rgb(114, 104, 104);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile responsive version */
+@media (max-width: 600px) {
+  #main {
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+
+  .board-row {
+    grid-template-columns: repeat(3, 70px);
+    /* Smaller buttons on mobile */
+    gap: 3px;
+  }
+
+  .square {
+    height: 70px;
+    width: 70px;
+    font-size: 18px;
+    line-height: 70px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
 }
